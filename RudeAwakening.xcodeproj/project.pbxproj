@@ -1,0 +1,530 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C7CC16E31E1DF486008BFDB8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C7CC16E21E1DF486008BFDB8 /* main.m */; };
+		C7CC16E61E1DF486008BFDB8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C7CC16E51E1DF486008BFDB8 /* AppDelegate.m */; };
+		C7CC16E91E1DF486008BFDB8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7CC16E81E1DF486008BFDB8 /* ViewController.m */; };
+		C7CC16EC1E1DF486008BFDB8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7CC16EA1E1DF486008BFDB8 /* Main.storyboard */; };
+		C7CC16EE1E1DF486008BFDB8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7CC16ED1E1DF486008BFDB8 /* Assets.xcassets */; };
+		C7CC16F11E1DF486008BFDB8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7CC16EF1E1DF486008BFDB8 /* LaunchScreen.storyboard */; };
+		C7CC16FC1E1DF486008BFDB8 /* RudeAwakeningTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C7CC16FB1E1DF486008BFDB8 /* RudeAwakeningTests.m */; };
+		C7CC17071E1DF486008BFDB8 /* RudeAwakeningUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C7CC17061E1DF486008BFDB8 /* RudeAwakeningUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C7CC16F81E1DF486008BFDB8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C7CC16D61E1DF486008BFDB8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C7CC16DD1E1DF486008BFDB8;
+			remoteInfo = RudeAwakening;
+		};
+		C7CC17031E1DF486008BFDB8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C7CC16D61E1DF486008BFDB8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C7CC16DD1E1DF486008BFDB8;
+			remoteInfo = RudeAwakening;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C7CC16DE1E1DF486008BFDB8 /* RudeAwakening.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RudeAwakening.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C7CC16E21E1DF486008BFDB8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C7CC16E41E1DF486008BFDB8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		C7CC16E51E1DF486008BFDB8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		C7CC16E71E1DF486008BFDB8 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		C7CC16E81E1DF486008BFDB8 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		C7CC16EB1E1DF486008BFDB8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C7CC16ED1E1DF486008BFDB8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C7CC16F01E1DF486008BFDB8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C7CC16F21E1DF486008BFDB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C7CC16F71E1DF486008BFDB8 /* RudeAwakeningTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RudeAwakeningTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C7CC16FB1E1DF486008BFDB8 /* RudeAwakeningTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RudeAwakeningTests.m; sourceTree = "<group>"; };
+		C7CC16FD1E1DF486008BFDB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C7CC17021E1DF486008BFDB8 /* RudeAwakeningUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RudeAwakeningUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C7CC17061E1DF486008BFDB8 /* RudeAwakeningUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RudeAwakeningUITests.m; sourceTree = "<group>"; };
+		C7CC17081E1DF486008BFDB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C7CC16DB1E1DF486008BFDB8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C7CC16F41E1DF486008BFDB8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C7CC16FF1E1DF486008BFDB8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C7CC16D51E1DF486008BFDB8 = {
+			isa = PBXGroup;
+			children = (
+				C7CC16E01E1DF486008BFDB8 /* RudeAwakening */,
+				C7CC16FA1E1DF486008BFDB8 /* RudeAwakeningTests */,
+				C7CC17051E1DF486008BFDB8 /* RudeAwakeningUITests */,
+				C7CC16DF1E1DF486008BFDB8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C7CC16DF1E1DF486008BFDB8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C7CC16DE1E1DF486008BFDB8 /* RudeAwakening.app */,
+				C7CC16F71E1DF486008BFDB8 /* RudeAwakeningTests.xctest */,
+				C7CC17021E1DF486008BFDB8 /* RudeAwakeningUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C7CC16E01E1DF486008BFDB8 /* RudeAwakening */ = {
+			isa = PBXGroup;
+			children = (
+				C7CC16E41E1DF486008BFDB8 /* AppDelegate.h */,
+				C7CC16E51E1DF486008BFDB8 /* AppDelegate.m */,
+				C7CC16E71E1DF486008BFDB8 /* ViewController.h */,
+				C7CC16E81E1DF486008BFDB8 /* ViewController.m */,
+				C7CC16EA1E1DF486008BFDB8 /* Main.storyboard */,
+				C7CC16ED1E1DF486008BFDB8 /* Assets.xcassets */,
+				C7CC16EF1E1DF486008BFDB8 /* LaunchScreen.storyboard */,
+				C7CC16F21E1DF486008BFDB8 /* Info.plist */,
+				C7CC16E11E1DF486008BFDB8 /* Supporting Files */,
+			);
+			path = RudeAwakening;
+			sourceTree = "<group>";
+		};
+		C7CC16E11E1DF486008BFDB8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C7CC16E21E1DF486008BFDB8 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C7CC16FA1E1DF486008BFDB8 /* RudeAwakeningTests */ = {
+			isa = PBXGroup;
+			children = (
+				C7CC16FB1E1DF486008BFDB8 /* RudeAwakeningTests.m */,
+				C7CC16FD1E1DF486008BFDB8 /* Info.plist */,
+			);
+			path = RudeAwakeningTests;
+			sourceTree = "<group>";
+		};
+		C7CC17051E1DF486008BFDB8 /* RudeAwakeningUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C7CC17061E1DF486008BFDB8 /* RudeAwakeningUITests.m */,
+				C7CC17081E1DF486008BFDB8 /* Info.plist */,
+			);
+			path = RudeAwakeningUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C7CC16DD1E1DF486008BFDB8 /* RudeAwakening */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C7CC170B1E1DF486008BFDB8 /* Build configuration list for PBXNativeTarget "RudeAwakening" */;
+			buildPhases = (
+				C7CC16DA1E1DF486008BFDB8 /* Sources */,
+				C7CC16DB1E1DF486008BFDB8 /* Frameworks */,
+				C7CC16DC1E1DF486008BFDB8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RudeAwakening;
+			productName = RudeAwakening;
+			productReference = C7CC16DE1E1DF486008BFDB8 /* RudeAwakening.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C7CC16F61E1DF486008BFDB8 /* RudeAwakeningTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C7CC170E1E1DF486008BFDB8 /* Build configuration list for PBXNativeTarget "RudeAwakeningTests" */;
+			buildPhases = (
+				C7CC16F31E1DF486008BFDB8 /* Sources */,
+				C7CC16F41E1DF486008BFDB8 /* Frameworks */,
+				C7CC16F51E1DF486008BFDB8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C7CC16F91E1DF486008BFDB8 /* PBXTargetDependency */,
+			);
+			name = RudeAwakeningTests;
+			productName = RudeAwakeningTests;
+			productReference = C7CC16F71E1DF486008BFDB8 /* RudeAwakeningTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C7CC17011E1DF486008BFDB8 /* RudeAwakeningUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C7CC17111E1DF486008BFDB8 /* Build configuration list for PBXNativeTarget "RudeAwakeningUITests" */;
+			buildPhases = (
+				C7CC16FE1E1DF486008BFDB8 /* Sources */,
+				C7CC16FF1E1DF486008BFDB8 /* Frameworks */,
+				C7CC17001E1DF486008BFDB8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C7CC17041E1DF486008BFDB8 /* PBXTargetDependency */,
+			);
+			name = RudeAwakeningUITests;
+			productName = RudeAwakeningUITests;
+			productReference = C7CC17021E1DF486008BFDB8 /* RudeAwakeningUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C7CC16D61E1DF486008BFDB8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = Frenchal;
+				TargetAttributes = {
+					C7CC16DD1E1DF486008BFDB8 = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+					};
+					C7CC16F61E1DF486008BFDB8 = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = C7CC16DD1E1DF486008BFDB8;
+					};
+					C7CC17011E1DF486008BFDB8 = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = C7CC16DD1E1DF486008BFDB8;
+					};
+				};
+			};
+			buildConfigurationList = C7CC16D91E1DF486008BFDB8 /* Build configuration list for PBXProject "RudeAwakening" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C7CC16D51E1DF486008BFDB8;
+			productRefGroup = C7CC16DF1E1DF486008BFDB8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C7CC16DD1E1DF486008BFDB8 /* RudeAwakening */,
+				C7CC16F61E1DF486008BFDB8 /* RudeAwakeningTests */,
+				C7CC17011E1DF486008BFDB8 /* RudeAwakeningUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C7CC16DC1E1DF486008BFDB8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C7CC16F11E1DF486008BFDB8 /* LaunchScreen.storyboard in Resources */,
+				C7CC16EE1E1DF486008BFDB8 /* Assets.xcassets in Resources */,
+				C7CC16EC1E1DF486008BFDB8 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C7CC16F51E1DF486008BFDB8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C7CC17001E1DF486008BFDB8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C7CC16DA1E1DF486008BFDB8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C7CC16E91E1DF486008BFDB8 /* ViewController.m in Sources */,
+				C7CC16E61E1DF486008BFDB8 /* AppDelegate.m in Sources */,
+				C7CC16E31E1DF486008BFDB8 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C7CC16F31E1DF486008BFDB8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C7CC16FC1E1DF486008BFDB8 /* RudeAwakeningTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C7CC16FE1E1DF486008BFDB8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C7CC17071E1DF486008BFDB8 /* RudeAwakeningUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C7CC16F91E1DF486008BFDB8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C7CC16DD1E1DF486008BFDB8 /* RudeAwakening */;
+			targetProxy = C7CC16F81E1DF486008BFDB8 /* PBXContainerItemProxy */;
+		};
+		C7CC17041E1DF486008BFDB8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C7CC16DD1E1DF486008BFDB8 /* RudeAwakening */;
+			targetProxy = C7CC17031E1DF486008BFDB8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C7CC16EA1E1DF486008BFDB8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C7CC16EB1E1DF486008BFDB8 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C7CC16EF1E1DF486008BFDB8 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C7CC16F01E1DF486008BFDB8 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C7CC17091E1DF486008BFDB8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C7CC170A1E1DF486008BFDB8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C7CC170C1E1DF486008BFDB8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = RudeAwakening/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.frenchal.RudeAwakening;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		C7CC170D1E1DF486008BFDB8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = RudeAwakening/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.frenchal.RudeAwakening;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		C7CC170F1E1DF486008BFDB8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = RudeAwakeningTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.frenchal.RudeAwakeningTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RudeAwakening.app/RudeAwakening";
+			};
+			name = Debug;
+		};
+		C7CC17101E1DF486008BFDB8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = RudeAwakeningTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.frenchal.RudeAwakeningTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RudeAwakening.app/RudeAwakening";
+			};
+			name = Release;
+		};
+		C7CC17121E1DF486008BFDB8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = RudeAwakeningUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.frenchal.RudeAwakeningUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = RudeAwakening;
+			};
+			name = Debug;
+		};
+		C7CC17131E1DF486008BFDB8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = RudeAwakeningUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.frenchal.RudeAwakeningUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = RudeAwakening;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C7CC16D91E1DF486008BFDB8 /* Build configuration list for PBXProject "RudeAwakening" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C7CC17091E1DF486008BFDB8 /* Debug */,
+				C7CC170A1E1DF486008BFDB8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C7CC170B1E1DF486008BFDB8 /* Build configuration list for PBXNativeTarget "RudeAwakening" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C7CC170C1E1DF486008BFDB8 /* Debug */,
+				C7CC170D1E1DF486008BFDB8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		C7CC170E1E1DF486008BFDB8 /* Build configuration list for PBXNativeTarget "RudeAwakeningTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C7CC170F1E1DF486008BFDB8 /* Debug */,
+				C7CC17101E1DF486008BFDB8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		C7CC17111E1DF486008BFDB8 /* Build configuration list for PBXNativeTarget "RudeAwakeningUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C7CC17121E1DF486008BFDB8 /* Debug */,
+				C7CC17131E1DF486008BFDB8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C7CC16D61E1DF486008BFDB8 /* Project object */;
+}

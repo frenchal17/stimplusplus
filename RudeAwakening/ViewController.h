@@ -7,9 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <SpotifyAuthentication/SpotifyAuthentication.h>
+#import <SpotifyAudioPlayback/SpotifyAudioPlayback.h>
+#import <SpotifyMetadata/SPTPlaylistList.h>
 
 @interface ViewController : UIViewController
 
+@property (nonatomic, strong) SPTListPage *userPlaylists;
 
 @end
 

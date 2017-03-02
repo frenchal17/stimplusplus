@@ -20,11 +20,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+}
+
+- (void)viewDidAppear: (BOOL)animated {
+    [super viewDidAppear:false];
     [self loadPlaylist];
 }
 
 - (void)loadPlaylist{
     SPTAuth *auth = [SPTAuth defaultInstance];
+    NSLog(@"AUTH: %@", auth);
     [SPTPlaylistList playlistsForUser:@"1214913146" withAccessToken:auth.session.accessToken callback:^(NSError *error, id object) {
         SPTListPage *pl = object;
         
@@ -44,16 +49,13 @@
             [self getFullPlaylistPage:newListPage auth:auth];
     }];
     } else {
-        
         NSMutableArray* playlist = [[NSMutableArray alloc]init];
-        [self convertPlaylists:listPage arrayOfPlaylistSnapshots:playlist positionInListPage:0 auth:auth];
+        int playlistIndex = arc4random() % listPage.totalListLength;
+        [self convertPlaylist:listPage arrayOfPlaylistSnapshots:playlist positionInListPage:playlistIndex auth:auth];
     }
 }
 
--(void)convertPlaylists:(SPTListPage*)playlistPage arrayOfPlaylistSnapshots:(NSMutableArray*)playlist positionInListPage:(NSInteger)position auth:(SPTAuth*)auth
-{
-    NSLog(@"%@ my playlist items",playlistPage.items);
-    
+-(void)convertPlaylist:(SPTListPage*)playlistPage arrayOfPlaylistSnapshots:(NSMutableArray*)playlist positionInListPage:(NSInteger)position auth:(SPTAuth*)auth {
     if (playlistPage.items.count > position) {
         SPTPartialPlaylist* userPlaylist = playlistPage.items[position];
         [SPTPlaylistSnapshot playlistWithURI:userPlaylist.uri accessToken:auth.session.accessToken callback:^(NSError *error, SPTPlaylistSnapshot* playablePlaylist) {
@@ -73,13 +75,10 @@
             //[self.spotifyPlaylist removeAllObjects];
             //[self.spotifyPlaylist addObjectsFromArray:playlist];
             
-//            [spotifyPlaylists reloadData];
-            [self collectSong:0];
+            //[spotifyPlaylists reloadData];
+            int songIndex = arc4random() % playablePlaylist.tracksForPlayback.count;
+            [self collectSong:songIndex];
         }];
-    }
-    else
-    {
-        NSLog(@"The playlist selection has failed");
     }
 }
 
@@ -97,6 +96,5 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
 
 @end

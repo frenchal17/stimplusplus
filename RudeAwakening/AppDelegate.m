@@ -1,13 +1,4 @@
-//
-//  AppDelegate.m
-//  RudeAwakening
-//
-//  Created by Alex French on 1/4/17.
-//  Copyright © 2017 Frenchal. All rights reserved.
-//
-
 #import "AppDelegate.h"
-
 
 @interface AppDelegate ()
 @property (nonatomic, strong) SPTAuth *auth;
@@ -23,17 +14,11 @@
     self.player = [SPTAudioStreamingController sharedInstance];
     
     NSString *strings_private = [[NSBundle mainBundle] pathForResource:@"strings_private" ofType:@"strings"];
-    NSLog(@"BAHFSDF %@", strings_private);
     NSDictionary *keysDict = [NSDictionary dictionaryWithContentsOfFile:strings_private];
-    NSLog(@"AAAAAAA %@", keysDict);
 
-    // The client ID you got from the developer site
     self.auth.clientID = [keysDict objectForKey:@"ClientID"];
-    // The redirect URL as you entered it at the developer site
     self.auth.redirectURL = [NSURL URLWithString:@"rude-awakening://callback"];
-    // Setting the `sessionUserDefaultsKey` enables SPTAuth to automatically store the session object for future use.
     self.auth.sessionUserDefaultsKey = @"current session";
-    // Set the scopes you need the user to authorize. `SPTAuthStreamingScope` is required for playing audio.
     self.auth.requestedScopes = @[SPTAuthStreamingScope];
     
     // Become the streaming controller delegate
@@ -87,22 +72,5 @@
     }
     return NO;
 }
-
-- (void)loadPlaylist{
-    [SPTPlaylistList playlistsForUser:@"1214913146" withAccessToken:self.auth.session.accessToken callback:^(NSError *error, id object) {
-        SPTListPage *pl= object;
-        NSLog(@"%@ my playlist items",pl.items);
-    }];
-}
-    
-//- (void)audioStreamingDidLogin:(SPTAudioStreamingController *)audioStreaming
-//{
-//    [self.player playSpotifyURI:@"spotify:track:58s6EuEYJdlb0kO7awm3Vp" startingWithIndex:0 startingWithPosition:0 callback:^(NSError *error) {
-//        if (error != nil) {
-//            NSLog(@"*** failed to play: %@", error);
-//            return;
-//        }
-//    }];
-//}
 
 @end

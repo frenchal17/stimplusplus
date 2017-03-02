@@ -23,7 +23,9 @@
     self.player = [SPTAudioStreamingController sharedInstance];
     
     NSString *strings_private = [[NSBundle mainBundle] pathForResource:@"strings_private" ofType:@"strings"];
+    NSLog(@"BAHFSDF %@", strings_private);
     NSDictionary *keysDict = [NSDictionary dictionaryWithContentsOfFile:strings_private];
+    NSLog(@"AAAAAAA %@", keysDict);
 
     // The client ID you got from the developer site
     self.auth.clientID = [keysDict objectForKey:@"ClientID"];

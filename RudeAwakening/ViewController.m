@@ -10,6 +10,9 @@
 
 @interface ViewController ()
 
+@property (nonatomic, strong) SPTPlaylistSnapshot *spotifyPlaylist;
+@property (nonatomic, strong) SPTAudioStreamingController *player;
+
 @end
 
 @implementation ViewController
@@ -18,7 +21,6 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     [self loadPlaylist];
-    //[myPlaylists requestNextPageWithAccessToken:<#(NSString *)#> callback:<#^(NSError *error, id object)block#>]
 }
 
 - (void)loadPlaylist{
@@ -44,18 +46,51 @@
     } else {
         
         NSMutableArray* playlist = [[NSMutableArray alloc]init];
-        [self convertPlaylists:listPage arrayOfPlaylistSnapshots:playlist positionInListPage:0];
-        //[self collectSong:listPage];
+        [self convertPlaylists:listPage arrayOfPlaylistSnapshots:playlist positionInListPage:0 auth:auth];
     }
 }
 
--(void)convertPlaylists:(SPTListPage*)playlistPage arrayOfPlaylistSnapshots:(NSMutableArray*)playlist positionInListPage:(NSInteger)position
+-(void)convertPlaylists:(SPTListPage*)playlistPage arrayOfPlaylistSnapshots:(NSMutableArray*)playlist positionInListPage:(NSInteger)position auth:(SPTAuth*)auth
 {
     NSLog(@"%@ my playlist items",playlistPage.items);
+    
+    if (playlistPage.items.count > position) {
+        SPTPartialPlaylist* userPlaylist = playlistPage.items[position];
+        [SPTPlaylistSnapshot playlistWithURI:userPlaylist.uri accessToken:auth.session.accessToken callback:^(NSError *error, SPTPlaylistSnapshot* playablePlaylist) {
+            
+            if (error != nil) {
+                NSLog(@"*** Getting playlists got error: %@", error);
+                return;
+            }
+            
+            if(!playablePlaylist){
+                NSLog(@"PlaylistSnapshot from call back is nil");
+                return;
+            }
+            
+            self.spotifyPlaylist = playablePlaylist;
+            //[playlist addObject:playablePlaylist];
+            //[self.spotifyPlaylist removeAllObjects];
+            //[self.spotifyPlaylist addObjectsFromArray:playlist];
+            
+//            [spotifyPlaylists reloadData];
+            [self collectSong:0];
+        }];
+    }
+    else
+    {
+        NSLog(@"The playlist selection has failed");
+    }
 }
 
-- (void)collectSong:(SPTListPage*)listPage {
-    
+- (void)collectSong:(int) index {
+    if (index < self.spotifyPlaylist.firstTrackPage.items.count) {
+        self.player = [SPTAudioStreamingController sharedInstance];
+        NSURL *uri = [self.spotifyPlaylist.firstTrackPage.items[index] playableUri];
+        NSString *playableUri = [[NSString alloc] initWithString:[uri absoluteString]];
+        
+        [self.player playSpotifyURI:playableUri startingWithIndex:0 startingWithPosition:0 callback:nil];
+    }
 }
 
 - (void)didReceiveMemoryWarning {

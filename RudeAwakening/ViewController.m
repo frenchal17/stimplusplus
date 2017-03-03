@@ -12,10 +12,12 @@
 
 @property (nonatomic, strong) SPTPlaylistSnapshot *spotifyPlaylist;
 @property (nonatomic, strong) SPTAudioStreamingController *player;
+@property (nonatomic) BOOL *playerVerified;
 
 @end
 
 @implementation ViewController
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -24,17 +26,19 @@
 
 - (void)viewDidAppear: (BOOL)animated {
     [super viewDidAppear:false];
+    
     [self loadPlaylist];
 }
 
 - (void)loadPlaylist{
     SPTAuth *auth = [SPTAuth defaultInstance];
-    NSLog(@"AUTH: %@", auth);
-    [SPTPlaylistList playlistsForUser:@"1214913146" withAccessToken:auth.session.accessToken callback:^(NSError *error, id object) {
-        SPTListPage *pl = object;
+    if (auth.session.accessToken) {
+        [SPTPlaylistList playlistsForUser:@"1214913146" withAccessToken:auth.session.accessToken callback:^(NSError *error, id object) {
+            SPTListPage *pl = object;
         
-        [self getFullPlaylistPage:pl auth:auth];
-    }];
+            [self getFullPlaylistPage:pl auth:auth];
+        }];
+    }
 }
 
 - (void)getFullPlaylistPage:(SPTListPage*)listPage auth:(SPTAuth*)auth {

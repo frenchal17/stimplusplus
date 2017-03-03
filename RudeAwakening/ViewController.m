@@ -38,6 +38,8 @@
         
             [self getFullPlaylistPage:pl auth:auth];
         }];
+    } else {
+        [self performSelector: @selector(loadPlaylist) withObject:nil afterDelay: 0.5];
     }
 }
 
@@ -75,11 +77,7 @@
             }
             
             self.spotifyPlaylist = playablePlaylist;
-            //[playlist addObject:playablePlaylist];
-            //[self.spotifyPlaylist removeAllObjects];
-            //[self.spotifyPlaylist addObjectsFromArray:playlist];
             
-            //[spotifyPlaylists reloadData];
             int songIndex = arc4random() % playablePlaylist.tracksForPlayback.count;
             [self collectSong:songIndex];
         }];

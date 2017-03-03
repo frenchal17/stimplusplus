@@ -1,2 +1,2 @@
-strings_private.strings
-RudeAwakening/*.framework/*
+RudeAwakening/strings_private.strings
+*.framework/*
